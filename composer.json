@@ -1,0 +1,29 @@
+{
+    "name": "mhriad/laravel-form",
+    "description": "A lightweight Laravel Form Builder for Laravel 10 & 11 (replacement for LaravelCollective Form).",
+    "keywords": ["laravel", "form", "form-builder", "html"],
+    "type": "library",
+    "license": "MIT",
+
+    "require": {
+        "php": "^8.1",
+        "illuminate/support": "^10.0|^11.0"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "Mhriad\\Form\\": "src/"
+        }
+    },
+
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mhriad\\Form\\Providers\\FormServiceProvider"
+            ],
+            "aliases": {
+                "Form": "Mhriad\\Form\\Facades\\Form"
+            }
+        }
+    }
+}
