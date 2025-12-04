@@ -1,4 +1,4 @@
-#Laravel Form Builder (mhriad/laravel-form)
+# Laravel Form Builder (mhriad/laravel-form)
 
 A lightweight, drop-in Form Builder for Laravel 10 & 11 — a safe, minimal replacement for the LaravelCollective Form:: API.
 It provides common Form:: helpers (open, close, text, email, password, textarea, select, checkbox, radio, file, submit, etc.) so you can keep your existing Blade views without rewriting forms.
@@ -43,14 +43,21 @@ php artisan optimize:clear
 ## Usage Examples
 
 ### Simple form
-{!! Form::open(['route' => 'users.store', 'method' => 'post', 'class' => 'form-horizontal']) !!}
-{!! Form::text('first_name', old('first_name'), ['class' => 'form-control']) !!}
-{!! Form::text('last_name', old('last_name'), ['class' => 'form-control']) !!}
-{!! Form::email('email', old('email'), ['class' => 'form-control']) !!}
-{!! Form::select('plan_id', \App\Models\SubscriptionsPlan::pluck('name','id'), null, ['class' => 'form-control select2']) !!}
-{!! Form::file('avatar') !!}
-{!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
-{!! Form::close() !!}
+- {!! Form::open(['route' => 'users.store', 'method' => 'post', 'class' => 'form-horizontal']) !!}
+
+- {!! Form::text('first_name', old('first_name'), ['class' => 'form-control']) !!}
+
+- {!! Form::text('last_name', old('last_name'), ['class' => 'form-control']) !!}
+
+- {!! Form::email('email', old('email'), ['class' => 'form-control']) !!}
+
+- {!! Form::select('plan_id', \App\Models\SubscriptionsPlan::pluck('name','id'), null, ['class' => 'form-control select2']) !!}
+
+- {!! Form::file('avatar') !!}
+
+- {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
+
+- {!! Form::close() !!}
 
 ### Model binding
 Controller:
